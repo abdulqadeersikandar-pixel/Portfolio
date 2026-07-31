@@ -36,19 +36,30 @@ function ExperienceCard({ item, delay }) {
           </div>
         )}
 
-        {"offerLetter" in item &&
-          (item.offerLetter ? (
-            <a
-              href={item.offerLetter}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs font-mono text-cyan hover:opacity-80 transition-opacity"
-            >
-              <FileText size={14} /> View Offer Letter
-            </a>
-          ) : (
-            <p className="text-xs font-mono text-text-muted/50">Offer letter coming soon</p>
-          ))}
+        {(item.certificate || item.lor) && (
+          <div className="flex flex-wrap gap-4">
+            {item.certificate && (
+              <a
+                href={item.certificate}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs font-mono text-cyan hover:opacity-80 transition-opacity"
+              >
+                <FileText size={14} /> Certificate
+              </a>
+            )}
+            {item.lor && (
+              <a
+                href={item.lor}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs font-mono text-cyan hover:opacity-80 transition-opacity"
+              >
+                <FileText size={14} /> LOR
+              </a>
+            )}
+          </div>
+        )}
       </div>
     </Reveal>
   );
@@ -56,7 +67,7 @@ function ExperienceCard({ item, delay }) {
 
 export default function Experience() {
   const clientWork = experience.filter((e) => e.type === "client");
-  const internships = experience.filter((e) => e.type === "internship");
+  const internships = experience.filter((e) => e.type === "internship" || e.type === "training");
 
   return (
     <section id="experience" className="max-w-6xl mx-auto px-6 py-24 sm:py-32">
@@ -79,7 +90,7 @@ export default function Experience() {
       {/* Ongoing internships */}
       <Reveal delay={0.05}>
         <p className="font-mono text-xs text-text-muted uppercase tracking-wide mb-4 mt-10">
-          Currently interning at
+          Internships & Training
         </p>
       </Reveal>
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
@@ -107,8 +118,19 @@ export default function Experience() {
             <ul className="space-y-3 mb-7">
               {certifications.map((c) => (
                 <li key={c.name + c.org} className="flex justify-between text-sm gap-3">
-                  <span>{c.name}</span>
-                  <span className="text-text-muted font-mono text-xs whitespace-nowrap">{c.org}</span>
+                  {c.link ? (
+                    <a
+                      href={c.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="hover:text-cyan transition-colors underline decoration-dotted underline-offset-2"
+                    >
+                      {c.name}
+                    </a>
+                  ) : (
+                    <span>{c.name}</span>
+                  )}
+                  <span className="text-text-muted font-mono text-xs whitespace-nowrap shrink-0">{c.org}</span>
                 </li>
               ))}
             </ul>

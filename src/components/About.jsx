@@ -22,7 +22,8 @@ export default function About() {
           <p className="text-text-muted text-base sm:text-lg leading-relaxed mb-8">{about}</p>
           <a
             href={personal.resumeUrl}
-            download
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex items-center gap-2 rounded-full px-6 py-3 font-medium text-sm bg-gradient-to-r from-purple to-cyan text-white hover:opacity-90 transition-opacity"
           >
             <Download size={16} /> Download CV

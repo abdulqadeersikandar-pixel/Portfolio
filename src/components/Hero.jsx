@@ -76,7 +76,8 @@ export default function Hero() {
           </a>
           <a
             href={personal.resumeUrl}
-            download
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex items-center gap-2 rounded-full px-6 py-3 font-medium text-sm border border-purple-light/30 hover:border-cyan hover:text-cyan transition-colors"
           >
             <Download size={16} /> CV

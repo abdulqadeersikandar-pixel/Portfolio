@@ -8,7 +8,7 @@ export const personal = {
   github: "https://github.com/abdulqadeersikandar-pixel",
   instagram: "https://instagram.com/abdulqadeersikandar",
   photo: "/images/profile.jpg",
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "https://drive.google.com/file/d/1nygQjdpdtC6UsNoUoJVT3w701BoLLBtN/view?usp=sharing",
   looking: [
     "Remote Internship",
     "Frontend Internship",
@@ -122,29 +122,23 @@ export const experience = [
     type: "internship",
     role: "Remote Web Development Intern",
     org: "Code Alpha",
-    status: "Ongoing",
-    offerLetter: "/offers/code-alpha.pdf",
-  },
-  {
-    type: "internship",
-    role: "Remote Web Development Intern",
-    org: "Fenixtech",
-    status: "Ongoing",
-    offerLetter: "/offers/fenixtech.pdf",
-  },
-  {
-    type: "internship",
-    role: "Remote Web Development Intern",
-    org: "Infolith",
-    status: "Ongoing",
-    offerLetter: "/offers/infolith.pdf",
+    status: "Completed",
+    certificate: "https://drive.google.com/file/d/1j3kxITmixtFe2541RY5uJ6VY7I286ZdU/view?usp=sharing",
+    lor: "https://drive.google.com/file/d/1oSnlvRqB78Rvn4OBkezy1767M-eiyDYJ/view?usp=sharing",
   },
   {
     type: "internship",
     role: "Remote Web Development Intern",
     org: "DecodeLabs",
+    status: "Completed",
+    certificate: "https://drive.google.com/file/d/1XaCNJRLz475T93atKSDsZ7AlmFt5Tge_/view?usp=sharing",
+    lor: "https://drive.google.com/file/d/1jnvtn7WD4eusvwthzJYnck_r7NLf-Gkc/view?usp=sharing",
+  },
+  {
+    type: "training",
+    role: "Full Stack Web Development Trainee",
+    org: "Hunarmand Punjab",
     status: "Ongoing",
-    offerLetter: "/offers/decodelabs.pdf",
   },
   {
     type: "client",
@@ -156,10 +150,31 @@ export const experience = [
 ];
 
 export const certifications = [
-  { name: "Resume Writing", org: "HP LIFE" },
-  { name: "HTML, CSS & JavaScript", org: "Great Learning" },
-  { name: "Web Development", org: "Alison" },
-  { name: "Web Development", org: "MindLuster" },
+  {
+    name: "Exploring Artificial Intelligence Use Cases and Applications",
+    org: "AWS (Coursera)",
+    link: "https://drive.google.com/file/d/1gQJTpKaAy05uGD0RZUSOhR48_nlWrKUJ/view?usp=sharing",
+  },
+  {
+    name: "Resume Writing",
+    org: "HP LIFE",
+    link: "https://drive.google.com/file/d/1GTGGTcXKAG4tb_Tb13d-cPrjhOQzrjFa/view?usp=sharing",
+  },
+  {
+    name: "HTML, CSS & JavaScript",
+    org: "Great Learning",
+    link: "https://drive.google.com/drive/folders/17qgJwkWj1N4MpOXT8Z19PX-kmJe8cGqO?usp=sharing",
+  },
+  {
+    name: "Web Development",
+    org: "Alison",
+    link: "https://drive.google.com/file/d/199Zy2v2Cw9DDEGddIRojMFyhU86xWT7w/view?usp=sharing",
+  },
+  {
+    name: "Web Development",
+    org: "MindLuster",
+    link: "https://drive.google.com/file/d/1BU1iaX8I8Y_cAYOa0W7zyE7m2VfftpAF/view?usp=sharing",
+  },
 ];
 
 export const languages = ["English", "Urdu", "Punjabi"];
